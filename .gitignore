@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Config files (real credentials)
+config/config.py
+
 # C extensions
 *.so
 
