@@ -37,7 +37,7 @@ class OKXClient:
             "Content-Type": "application/json"
         }
 
-    def request(self, method: str, endpoint: str, params: dict = None) -> dict:
+    def request(self, method: str, endpoint: str, params: Optional[dict] = None) -> dict:
         url = self.base_url + endpoint
         body = json.dumps(params) if method.upper() in ["POST", "PUT"] else ""
         headers = self.headers(method, endpoint, body)

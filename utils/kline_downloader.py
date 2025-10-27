@@ -1,6 +1,7 @@
 import time
 import csv
 import os
+from typing import Optional
 from okx_api.client import OKXClient
 from okx_api.endpoints import HISTORY_CANDLES
 from datetime import datetime
@@ -21,7 +22,7 @@ class KlineDownloader:
         bar: str,
         start_date: str,
         end_date: str,
-        save_path: str = None,
+        save_path: Optional[str] = None,
     ) -> list:
         instId = f"{symbol}-USDT"
         start_ts = self.to_timestamp(start_date)
